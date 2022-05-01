@@ -52,7 +52,7 @@ while True:
             job_location = job_result.find("div", class_ = "col-md-6").find("tr").find_all("td")[1]
             job_requirements = job_result.find("div", class_ = "main-wrapper").find_all("p")[1]
 
-            print(job_name + "\n")
+            print(job_name.text.strip() + "\n")
 
             out.write("NAZEV: " + job_name.text.strip() + "\n")
             out.write("POPIS:\n" + job_description.text.strip() + "\n")
